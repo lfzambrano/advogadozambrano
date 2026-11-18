@@ -128,6 +128,18 @@
     .areas li p { color: var(--claro-suave); font-size: 16px; margin: 0; }
     .areas .acoes { text-align: center; margin-top: 56px; }
     .areas .acoes .botao-linha { color: var(--claro); }
+    /* páginas por tema (landings), 17/11/2026 */
+    .temas { margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(184,154,87,.35); }
+    .temas h3 { text-align: center; color: var(--ouro); font-size: 1.9rem; margin-bottom: 28px; }
+    .temas-grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .temas-grade a { display: flex; flex-direction: column; gap: 6px; padding: 20px; min-height: 44px; border: 1px solid rgba(184,154,87,.45);
+      border-radius: 12px; color: var(--claro); text-decoration: none; transition: background .15s, border-color .15s; }
+    .temas-grade a:hover, .temas-grade a:focus-visible { background: rgba(184,154,87,.10); border-color: var(--ouro); }
+    .temas-grade b { font: 600 1.35rem/1.15 var(--fonte-titulo); color: #fff; }
+    .temas-grade span { font-size: 15px; line-height: 1.4; color: var(--claro-suave); }
+    .temas-grade em { margin-top: auto; padding-top: 8px; font-style: normal; font-size: 14px; font-weight: 600; color: var(--ouro); }
+    @media (max-width: 1080px) { .temas-grade { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .temas-grade { grid-template-columns: 1fr; } .temas-grade a { text-align: center; } }
 
     /* livro */
     .livro { background: var(--papel); }
@@ -378,6 +390,15 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.5L16 9.5"/></svg>
             <div><h3>Criminal</h3><p>Defesa em todas as fases, do inquérito policial ao tribunal do júri, com atendimento reservado.</p></div></li>
         </ul>
+        <div class="temas" id="temas">
+          <h3>Páginas por tema</h3>
+          <div class="temas-grade">
+            <a href="https://dividasbancarias-zambrano.netlify.app" target="_blank" rel="noopener"><b>Dívidas bancárias</b><span>Perguntas sobre o seu contrato com o banco.</span><em>Abrir a página →</em></a>
+            <a href="https://direitospcd-zambrano.netlify.app" target="_blank" rel="noopener"><b>PcD e BPC</b><span>Tempo de contribuição da pessoa com deficiência e renda do BPC.</span><em>Abrir a página →</em></a>
+            <a href="https://glittery-trifle-e13873.netlify.app" target="_blank" rel="noopener"><b>Auxílio-acidente</b><span>Perguntas sobre o acidente, a sequela e o trabalho.</span><em>Abrir a página →</em></a>
+            <a href="https://calculadorainss.com.br" target="_blank" rel="noopener"><b>Teto do INSS</b><span>Calculadora do desconto de INSS no contracheque.</span><em>Abrir a calculadora →</em></a>
+          </div>
+        </div>
         <div class="acoes"><a class="botao botao-linha" href="#contato">Falar com o escritório</a></div>
       </div>
     </section>
